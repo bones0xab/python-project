@@ -7,7 +7,7 @@ pytest-html>=3.2.0
 jira>=3.5.0
 
 # Azure DevOps integration
-azure-devops>=7.1.0
+azure-devops>=7.1.0b4
 
 # Utilities
 python-dotenv>=1.0.0

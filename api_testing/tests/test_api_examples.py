@@ -8,8 +8,20 @@ from api_testing.core.config import Config
 @pytest.fixture(scope="session")
 def api_config():
     """Load API configuration"""
-    config = Config(config_file='config.yaml')
-    return config.get_api_config()
+    try:
+        config = Config(config_file='config.yaml')
+        api_config = config.get_api_config()
+        # If base_url is not configured, use default
+        if not api_config.get('base_url'):
+            api_config['base_url'] = 'https://jsonplaceholder.typicode.com'
+        return api_config
+    except:
+        # Return default config if config file doesn't exist
+        return {
+            'base_url': 'https://jsonplaceholder.typicode.com',
+            'timeout': 30,
+            'verify_ssl': True
+        }
 
 
 @pytest.fixture(scope="session")
