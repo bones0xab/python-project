@@ -1,0 +1,22 @@
+# REST API Testing Configuration Example
+# Copy this file to config.yaml and update with your values
+
+# Jira Configuration
+jira:
+  server: "https://your-jira-instance.atlassian.net"
+  username: "your-email@example.com"
+  api_token: "your-jira-api-token"
+  project_key: "TEST"
+
+# Azure DevOps Configuration
+azure_devops:
+  organization_url: "https://dev.azure.com/your-organization"
+  project: "your-project-name"
+  personal_access_token: "your-pat-token"
+  test_plan_id: 12345
+
+# API Testing Configuration
+api:
+  base_url: "https://api.example.com"
+  timeout: 30
+  verify_ssl: true

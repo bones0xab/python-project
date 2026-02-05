@@ -1,0 +1,14 @@
+# Core dependencies for REST API testing
+requests>=2.31.0
+pytest>=7.4.0
+pytest-html>=3.2.0
+
+# Jira integration
+jira>=3.5.0
+
+# Azure DevOps integration
+azure-devops>=7.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
